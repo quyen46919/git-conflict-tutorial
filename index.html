@@ -5,19 +5,259 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="./scss/base.scss" />
+        <link rel="stylesheet" href="./css/container.css" />
+        <link rel="stylesheet" href="./css/header.css" />
         <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
-        <div class="header">
-            <div class="header__logo">{Finsweet</div>
-            <div class="header__links">
-                <a href="#" class="header__link--home"> Home</a>
-                <a href="#" class="header__link--blog">Blog</a>
-                <a href="#" class="header__link--about">About us</a>
-                <a href="#" class="header__link--contact">Contact us</a>
+        <div class="container">
+            <!-- HEADER -->
+            <div class="header">
+                <div class="header__logo">{Finsweet</div>
+                <div class="header__links">
+                    <a href="#" class="header__link--home"> Home</a>
+                    <a href="#" class="header__link--blog">Blog</a>
+                    <a href="#" class="header__link--about">About us</a>
+                    <a href="#" class="header__link--contact">Contact us</a>
+                </div>
+                <button class="header__subcribe">Subcribe</button>
             </div>
-            <button class="header__subcribe">Subcribe</button>
-            <button class="jsakldjksadjklas">asdjlksajkd</button>
+
+            <!-- MAIN CONTENT -->
+            <div class="homepage">
+                <!-- BANNER -->
+                <div class="homepage__banner">
+                    <div class="homepage__background">
+                        <div class="homepage__overlay"></div>
+                        <div class="homepage__content">
+                            <p class="homepage__content--label">
+                                Posted on <span>startup</span>
+                            </p>
+                            <p class="homepage__content--title">
+                                Step-by-step guide to choosing great font pairs
+                            </p>
+                            <p class="homepage__content--author">
+                                By <span>James West</span> | May 23, 2022
+                            </p>
+                            <p class="homepage__content--des">
+                                Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident.
+                            </p>
+                            <button class="homepage__button">
+                                Read More >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- POST -->
+                <div class="homepage__posts">
+                    <div class="homepage__posts--left">
+                        <p class="homepage__title">Featured Post</p>
+                        <div class="homepage__main-new">
+                            <img
+                                src="./public/imgs/white-concrete-building.png"
+                                alt="white-concrete-building"
+                            />
+                            <p class="homepage__main-new--author">
+                                By John Doe l May 23, 2022
+                            </p>
+                            <div class="homepage__main-new--title">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor.
+                            </div>
+                            <div class="homepage__main-new--des">
+                                Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident.
+                            </div>
+                            <button class="homepage__button">
+                                Read more >
+                            </button>
+                        </div>
+                    </div>
+                    <div class="homepage__posts--right">
+                        <div class="homepage__row--space-between">
+                            <p class="homepage__title">All Posts</p>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="homepage__post-list">
+                            <div class="homepage__post">
+                                <div class="homepage__post--author">
+                                    By John Deo l Aug 23, 2021
+                                </div>
+                                <a href="#" class="homepage__post--title">
+                                    8 Figma design systems that you can download
+                                    for free today.
+                                </a>
+                            </div>
+                            <div class="homepage__post">
+                                <div class="homepage__post--author">
+                                    By John Deo l Aug 23, 2021
+                                </div>
+                                <a href="#" class="homepage__post--title">
+                                    8 Figma design systems that you can download
+                                    for free today.
+                                </a>
+                            </div>
+                            <div class="homepage__post">
+                                <div class="homepage__post--author">
+                                    By John Deo l Aug 23, 2021
+                                </div>
+                                <a href="#" class="homepage__post--title">
+                                    8 Figma design systems that you can download
+                                    for free today.
+                                </a>
+                            </div>
+                            <div class="homepage__post">
+                                <div class="homepage__post--author">
+                                    By John Deo l Aug 23, 2021
+                                </div>
+                                <a href="#" class="homepage__post--title">
+                                    8 Figma design systems that you can download
+                                    for free today.
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ABOUT US -->
+                <div class="homepage__about-us">
+                    <div class="homepage__row--flex-end">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="homepage__about-mission">
+                        <div class="homepage__about-mission--left">
+                            <p class="homepage__about-mission--label">
+                                ABOUT US
+                            </p>
+                            <p class="homepage__about-mission--title-h2">
+                                We are a community of content writers who share
+                                their learnings
+                            </p>
+                            <p class="homepage__about-mission--des">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <a href="#" class="homepage__about-mission--link"
+                                >Read more ></a
+                            >
+                        </div>
+                        <div class="homepage__about-mission--right">
+                            <p class="homepage__about-mission--label">
+                                Our mision
+                            </p>
+                            <p class="homepage__about-mission--title-h3">
+                                Creating valuable content for creatives all
+                                around the world
+                            </p>
+                            <p class="homepage__about-mission--des">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="homepage__category">
+                    <p class="homepage__title">Choose A Category</p>
+                    <div class="homepage__category-list">
+                        <div class="homepage__category-card">
+                            <p class="homepage__category-card--icon">
+                                <img
+                                    src="./public/icons/building.png"
+                                    alt="Tòa nhà"
+                                />
+                            </p>
+                            <p class="homepage__category-card--title">
+                                Business
+                            </p>
+                            <p class="homepage__category-card--des">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit.
+                            </p>
+                        </div>
+                        <div class="homepage__category-card">
+                            <p class="homepage__category-card--icon">
+                                <img
+                                    src="./public/icons/rocket.png"
+                                    alt="Tên lửa"
+                                />
+                            </p>
+                            <p class="homepage__category-card--title">
+                                Startup
+                            </p>
+                            <p class="homepage__category-card--des">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit.
+                            </p>
+                        </div>
+                        <div class="homepage__category-card">
+                            <p class="homepage__category-card--icon">
+                                <img
+                                    src="./public/icons/stock.png"
+                                    alt="Kinh tế"
+                                />
+                            </p>
+                            <p class="homepage__category-card--title">
+                                Economy
+                            </p>
+                            <p class="homepage__category-card--des">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit.
+                            </p>
+                        </div>
+                        <div class="homepage__category-card">
+                            <p class="homepage__category-card--icon">
+                                <img
+                                    src="./public/icons/cyborg.png"
+                                    alt="Trí tuệ nhân tạo"
+                                />
+                            </p>
+                            <p class="homepage__category-card--title">
+                                Technology
+                            </p>
+                            <p class="homepage__category-card--des">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHY WE START -->
+                <div class="homepage__why-we-start">
+                    <img src="./public/imgs/friens.png" alt="Bạn bè" />
+                    <div class="homepage__start">
+                        <p class="homepage__start--label">Why we started</p>
+                        <p class="homepage__start--title">
+                            It started out as a simple idea and evolved into our
+                            passion
+                        </p>
+                        <div class="homepage__start--des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut
+                            aliquip.
+                        </div>
+                        <button class="homepage__start--btn">
+                            Discover our story >
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

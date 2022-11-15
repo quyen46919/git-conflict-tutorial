@@ -1,40 +1,298 @@
-@import "../scss/variables/general.scss";
-@import "../scss/mixins/general.scss";
+@import "./scss/variables/colors.scss";
+@import "./scss/mixins/display.scss";
+@import "./scss/mixins/typo.scss";
+@import "./scss/components/button.scss";
 
-body {
-    margin: 0;
-    padding: 0;
-}
-// nested scss
-.header {
+.homepage {
     width: 100%;
-    height: 80px;
-    padding: 0px 80px 0px 83px;
-    box-sizing: border-box;
-    background-color: $darkBg;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    @include displayFlexCenter(center, space-between);
-    gap: 32px;
+    height: auto;
 
-    &__logo {
-        font-size: 24px;
-        font-weight: 700;
-        color: $white;
+    &__button {
+        @include buttonStyle($yellow);
     }
-    &__links {
-        flex-grow: 1;
-        // display: flex;
-        // justify-content: flex-end;
-        // gap: 24px;
-        @include displayFlexCenter(center, flex-end, 24px);
-        * {
-            color: $white;
-            text-decoration: none;
+
+    &__title {
+        @include heading2();
+    }
+
+    &__banner {
+        width: 100%;
+        height: 720px;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        background-image: url("./public/imgs/homepage_banner.png");
+        background-size: cover;
+        background-color: $darkGray;
+        position: relative;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+            ),
+            radial-gradient(
+                30.56% 76.04% at 74.58% 0%,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+    }
+
+    &__content {
+        width: 804px;
+        @include position($position: absolute, $top: 128px, $left: 80px);
+        color: $white;
+
+        &--label {
+            @include fontInter();
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            margin: 0;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        &--title {
+            @include heading();
+        }
+
+        &--author {
+            @include body1();
+            span {
+                color: $yellow;
+            }
+        }
+
+        &--des {
+            @include body1();
+            margin-bottom: 48px;
+            margin-top: 16px;
         }
     }
-    &__subcribe {
-        @include button();
+
+    &__posts {
+        width: 100%;
+        height: auto;
+        @include padding(130px 78px 128px 80px);
+
+        @include displayFlex(flex-start, flex-start, 32px);
+
+        &--left {
+            width: 733px;
+            height: 100%;
+            @include displayFlexCol(flex-start, flex-start, 32px);
+        }
+
+        &--right {
+            flex: 1;
+            height: 100%;
+            @include displayFlexCol(flex-start, flex-start, 32px);
+        }
+    }
+
+    &__main-new {
+        width: 100%;
+        height: auto;
+        @include padding(32px);
+        border: 1px solid $lightSilver;
+        @include displayFlexCol(flex-start, center);
+
+        &--author {
+            @include label();
+            margin-top: 32px;
+        }
+
+        &--title {
+            @include heading3();
+        }
+
+        &--des {
+            @include body1();
+            margin-bottom: 32px;
+        }
+    }
+
+    &__row {
+        &--space-between {
+            width: 100%;
+            @include displayFlex(center, space-between);
+            a {
+                color: $purple;
+                @include body1();
+            }
+        }
+
+        &--flex-end {
+            width: 100%;
+            @include displayFlex(center, flex-end);
+
+            & > div:nth-child(1) {
+                width: 66%;
+                height: 23px;
+                background-color: $yellow;
+            }
+            & > div:nth-child(2) {
+                width: 22%;
+                height: 23px;
+                background-color: $purple;
+            }
+        }
+    }
+
+    &__post-list {
+        @include displayFlexCol();
+    }
+
+    &__post {
+        @include padding(32px 116px 25px 32px);
+        transition: 0.2s;
+
+        &--author {
+            @include label();
+            margin-bottom: 8px;
+        }
+
+        &--title {
+            @include heading4();
+        }
+
+        &:hover {
+            background-color: $lightYellow;
+        }
+    }
+
+    &__about-us {
+        width: 100%;
+        margin-bottom: 128px;
+        @include padding(0 80px);
+        @include displayFlexCol();
+    }
+
+    &__about-mission {
+        width: 100%;
+        background-color: $lavendar;
+        @include displayFlex(flex-start, space-between, 61px);
+        @include padding(96px 108px 96px 80px);
+
+        &--left {
+            width: 50%;
+            height: auto;
+        }
+
+        &--right {
+            width: 50%;
+            height: auto;
+        }
+
+        &--label {
+            @include caption();
+            margin-bottom: 24px;
+        }
+        &--title-h2 {
+            @include heading2();
+            margin-bottom: 16px;
+        }
+        &--title-h3 {
+            @include heading3();
+            margin-bottom: 16px;
+        }
+        &--des {
+            @include body1();
+            margin-bottom: 16px;
+            color: $mediumGray;
+        }
+        &--link {
+            @include link();
+        }
+    }
+
+    &__category {
+        width: 100%;
+        @include displayFlexCol(center, center, 48px);
+        @include padding(0 80px);
+        margin-bottom: 128px;
+    }
+
+    &__category-list {
+        width: 100%;
+        @include displayFlex(flex-start, space-between, 32px);
+    }
+
+    &__category-card {
+        width: 100%;
+        border: 1px solid $mediumSilver;
+        @include padding(32px);
+        transition: 0.2s;
+
+        &:hover {
+            background-color: $yellow;
+        }
+
+        &--icon {
+            width: 48px;
+            height: 48px;
+            background-color: $lightYellow;
+            border-radius: 10px;
+            @include displayFlex();
+        }
+
+        &--title {
+            @include heading3();
+        }
+        &--des {
+            @include body1();
+        }
+    }
+
+    &__why-we-start {
+        width: 100%;
+        height: 705px;
+        position: relative;
+        @include padding(0 80px);
+        margin-bottom: 128px;
+
+        img {
+            width: 949px;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+
+    &__start {
+        width: 706px;
+        height: auto;
+        background-color: $white;
+        @include padding(80px);
+        @include position(absolute, auto, 0px, 0px, auto, 2);
+
+        &--label {
+            @include caption();
+            margin-bottom: 24px;
+        }
+
+        &--title {
+            @include heading1();
+            margin-bottom: 16px;
+        }
+
+        &--des {
+            @include body1();
+            margin-bottom: 32px;
+        }
+
+        &--btn {
+            @include buttonStyle($yellow);
+        }
     }
 }
