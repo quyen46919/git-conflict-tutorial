@@ -1,0 +1,5 @@
+@import "../../scss/mixins/typo.scss";
+
+h1 {
+	@include heading1;
+}
